@@ -4,7 +4,7 @@ services:
   - docker
 
 before_intall:
-  - docker build -t matheusboy/Wine_Learning_DevOps -f Dockerfile.dev .
+  - docker build -t matheusboy/travis_docker -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true matheusboy/Wine_Learning_DevOps npm run test 
+  - docker run -e CI=true matheusboy/travis_docker npm run test 
